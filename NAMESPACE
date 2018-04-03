@@ -2,6 +2,8 @@
 
 export(fixer_account_type)
 export(fixer_api_key)
+export(fixer_convert)
 export(fixer_historical)
 export(fixer_latest)
 export(fixer_symbols)
+export(fixer_timeseries)

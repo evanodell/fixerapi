@@ -4,11 +4,12 @@
 \alias{fixer_historical}
 \title{Historical exchange rates}
 \usage{
-fixer_historical(date = Sys.Date(), base = "EUR", symbols = NULL)
+fixer_historical(date = NULL, base = "EUR", symbols = NULL)
 }
 \arguments{
 \item{date}{A date in YYYY-MM-DD format, or any value that can be coerced
-to YYYY-MM-DD format with \code{as.Date()}. Defaults to current system date.}
+to YYYY-MM-DD format with \code{as.Date()}. Defaults to \code{NULL}, which
+returns the latest conversion data.}
 
 \item{base}{The base currency to index other currencies against.
 Defaults to \code{"EUR"}. Can only be changed with paid plans.}
