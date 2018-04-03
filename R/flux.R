@@ -43,6 +43,8 @@ fixer_fluctuation <- function(start_date, end_date,
 
   df <- jsonlite::fromJSON(query)
 
+  df <- success_check(df)
+
   rates <- enframe(df$rates)
 
   rates$value <- lapply(rates$value, tibble::as.tibble)

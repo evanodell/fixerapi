@@ -20,11 +20,8 @@
 #' x <- fixer_convert(from = "GBP", to = "JPY", amount = 25)
 #'
 #' }
-#'
 
 fixer_convert <- function(from, to, amount = 1, date = NULL) {
-  free_check()
-
   if (missing(from) || missing(to)) {
     stop("Values for the `from` and `to` parameters must be included",
       call. = FALSE

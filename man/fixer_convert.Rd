@@ -30,5 +30,4 @@ Currency conversion is only available on paid plans.
 x <- fixer_convert(from = "GBP", to = "JPY", amount = 25)
 
 }
-
 }
