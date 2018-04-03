@@ -44,4 +44,3 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
 
   df
 }
-

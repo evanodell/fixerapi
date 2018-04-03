@@ -1,4 +1,4 @@
 library(testthat)
-library(fixerrr)
+library(fixerapi)
 
-test_check("fixerrr")
+test_check("fixerapi")

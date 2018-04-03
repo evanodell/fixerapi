@@ -1,6 +1,6 @@
 
 
-#' fixerrr: an R client for the fixer.io currency api
+#' fixerapi: an R client for the fixer.io currency api
 #'
 #'
 #' @description The \href{https://fixer.io}{fixer.io} API provides real-time
@@ -12,7 +12,8 @@
 #'
 #'
 #' @docType package
-#' @name fixerrr
+#' @name fixerapi
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble enframe as.tibble
+#' @importFrom tidyr unnest_
 NULL

@@ -14,8 +14,9 @@ fixer_time_series(start_date, end_date, base = "EUR", symbols = NULL)
 \item{base}{The base currency to index other currencies against.
 Defaults to \code{"EUR"}. Can only be changed with paid plans.}
 
-\item{symbols}{The symbols of currencies to return exchange rates for.
-Defaults to \code{NULL} and returns all available currencies. See
+\item{symbols}{A character vector of the symbols of currencies to return
+exchange rates for, or a string for a single currency. Defaults to
+\code{NULL} and returns all available currencies. See
 \code{\link{fixer_symbols}} for details on symbol options.}
 }
 \value{

@@ -3,7 +3,7 @@
 #' Set account type
 #'
 #' @description Paid accounts have access to additional features.
-#' \code{fixerrr} uses this information to activate paid features like SSL
+#' \code{fixerapi} uses this information to activate paid features like SSL
 #' encryption and prevent API calls that are not allowed by a user's account
 #' type.
 #'
@@ -17,11 +17,12 @@
 #'
 #' @export
 #'
-fixer_account_type <- function(type = c("free", "basic", "pro", "plus", "enterprise")) {
+fixer_account_type <- function(type = c("free", "basic", "pro",
+                                        "plus", "enterprise")) {
   if (tolower(type) %in% c("free", "basic", "pro", "plus", "enterprise") &&
     length(type) == 1) {
     Sys.setenv(FIXER_ACT_TYPE = type)
   } else {
-    message('Please select one of "free", "basic", "pro", "plus" or "enterprise".')
+    message('Please use one of "free", "basic", "pro", "plus" or "enterprise".')
   }
 }

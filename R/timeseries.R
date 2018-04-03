@@ -23,7 +23,6 @@
 
 fixer_time_series <- function(start_date, end_date,
                               base = "EUR", symbols = NULL) {
-
   date_check(start_date, end_date)
 
   base_query <- base_util(base)
@@ -40,11 +39,11 @@ fixer_time_series <- function(start_date, end_date,
 
   df <- success_check(df)
 
-  rates <- enframe(df$rates)
+  rates <- tibble::enframe(df$rates)
 
   rates$value <- lapply(rates$value, tibble::as.tibble)
 
-  rates <- tidyr::unnest(rates, value)
+  rates <- tidyr::unnest_(rates, "value")
 
   rates
 }

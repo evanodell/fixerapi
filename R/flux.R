@@ -1,8 +1,5 @@
 
 
-
-
-
 #' Currency fluctuation
 #'
 #' @description Returns fluctuation in currency exchange rates for one or more
@@ -31,8 +28,7 @@
 
 
 fixer_fluctuation <- function(start_date, end_date,
-                              base = "EUR", symbols = NULL){
-
+                              base = "EUR", symbols = NULL) {
   date_check(start_date, end_date)
 
   base_query <- base_util(base)
@@ -51,9 +47,7 @@ fixer_fluctuation <- function(start_date, end_date,
 
   rates$value <- lapply(rates$value, tibble::as.tibble)
 
-  rates <- tidyr::unnest(rates, value)
+  rates <- tidyr::unnest_(rates, "value")
 
   rates
-
 }
-

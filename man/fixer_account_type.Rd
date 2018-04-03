@@ -4,14 +4,20 @@
 \alias{fixer_account_type}
 \title{Set account type}
 \usage{
-fixer_account_type(type = c("free", "basic", "pro", "plus"))
+fixer_account_type(type = c("free", "basic", "pro", "plus", "enterprise"))
 }
 \arguments{
 \item{type}{fixer.io account type. Accepts one of \code{"free"},
-\code{"basic"}, \code{"pro"} or \code{"plus"}.}
+\code{"basic"}, \code{"pro"}, \code{"plus"} or \code{"enterprise"}, in
+keeping with fixer.io's \href{https://fixer.io/product}{pricing}.}
 }
 \description{
-Paid accounts have access to additional features. \code{fixerrr} uses this
-information to activate paid features like SSL encryption and prevent API
-calls that are not allowed by a users account type.
+Paid accounts have access to additional features.
+\code{fixerrr} uses this information to activate paid features like SSL
+encryption and prevent API calls that are not allowed by a user's account
+type.
+
+The fixer.io API still checks the account type when receiving
+requests, so putting in a higher level account type than you actually have
+will not allow you access additional features.
 }

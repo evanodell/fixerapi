@@ -37,7 +37,7 @@ fixer_latest <- function(base = "EUR", symbols = NULL) {
 
   df <- success_check(df)
 
-  rates <- enframe(df$rates)
+  rates <- tibble::enframe(df$rates)
 
   rates$value <- as.numeric(rates$value)
 
