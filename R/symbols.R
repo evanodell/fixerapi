@@ -1,33 +1,21 @@
 
 
-
-
 #' Currency symbols
 #'
 #' Returns a tibble with the symbol and name of all currencies available
 #' through the Fixer API.
 #'
 #' @export
-fixer_symbols <- function(){
-
+fixer_symbols <- function() {
   query <- paste0(fixer_url, "symbols?access_key=", fixer_api_key())
 
   symbols <- fromJSON(query, flatten = TRUE)
 
-  if(!symbols$success) {
+  symbols <- success_check(symbols)
 
-    message(paste0("Error code: ", symbols$error$code))
-    message(paste0("Error type: ", symbols$error$type))
-    message(symbols$error$info)
+  df <- tibble::enframe(symbols$symbols)
 
-    stop(call. = FALSE)
+  df$value <- as.character(df$value)
 
-  }
-
-  s <- tibble::enframe(symbols$symbols)
-
-  s$value <- as.character(s$value)
-
-  s
-
+  df
 }
