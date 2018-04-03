@@ -7,9 +7,10 @@
 fixer_account_type(type = c("free", "basic", "pro", "plus", "enterprise"))
 }
 \arguments{
-\item{type}{fixer.io account type. Accepts one of \code{"free"},
-\code{"basic"}, \code{"pro"}, \code{"plus"} or \code{"enterprise"}, in
-keeping with fixer.io's \href{https://fixer.io/product}{pricing}.}
+\item{type}{Your \href{https://fixer.io/}{fixer.io} account type. Accepts
+one of \code{"free"}, \code{"basic"}, \code{"pro"}, \code{"plus"} or
+\code{"enterprise"}, in keeping with fixer.io's
+\href{https://fixer.io/product}{pricing} structure.}
 }
 \description{
 Paid accounts have access to additional features.
@@ -17,7 +18,10 @@ Paid accounts have access to additional features.
 encryption and prevent API calls that are not allowed by a user's account
 type.
 
-The fixer.io API still checks the account type when receiving
-requests, so putting in a higher level account type than you actually have
-will not allow you access additional features.
+The \href{https://fixer.io/}{fixer.io} API still checks the
+account type when receiving requests, so putting in a higher level account
+type than you actually have will not allow you access additional features.
+If you have a paid account but do not set your account status you will
+receive warning messages but there will be no other effect on your usage of
+the API.
 }

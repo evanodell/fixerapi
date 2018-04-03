@@ -23,7 +23,6 @@
 #' }
 
 fixer_historical <- function(date = NULL, base = "EUR", symbols = NULL) {
-
   free_check()
 
   date <- ifelse(is.null(date), "latest", as.Date(date))

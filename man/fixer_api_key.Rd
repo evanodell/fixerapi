@@ -7,9 +7,15 @@
 fixer_api_key(force = FALSE)
 }
 \arguments{
-\item{force}{If TRUE, resets the API key and requires a
-new key to be provided.}
+\item{force}{If \code{TRUE}, resets the API key and requires a new key to
+be provided, even if one already exists. If \code{FALSE} and an API key
+already exists, that key will be printed to the console. If no key exists,
+you will be prompted to enter a key regardless of the value of
+\code{force}. Defaults to \code{FALSE}.}
 }
 \description{
-Fixer API Key
+\href{https://fixer.io}{fixer.io} requires an API key, which is saved as an
+environmental variable. In interactive mode, using \code{fixer_api_key}
+will prompt you to enter an API key. You can also use
+\code{Sys.setenv(FIXER_API_KEY = <key>)} to set the API key.
 }
