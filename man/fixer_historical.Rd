@@ -2,7 +2,7 @@
 % Please edit documentation in R/historical.R
 \name{fixer_historical}
 \alias{fixer_historical}
-\title{Historical exchange rates}
+\title{Historic exchange rates}
 \usage{
 fixer_historical(date = NULL, base = "EUR", symbols = NULL)
 }
@@ -30,5 +30,4 @@ Historical exchange rates are only available on paid fixer.io accounts.
 historical <- fixer_historical(date = "2017-05-18")
 
 }
-
 }

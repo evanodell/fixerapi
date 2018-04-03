@@ -11,7 +11,7 @@
 #' that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 #' Defaults to \code{NULL}, which returns the latest conversion data.
 #'
-#' @return A tibble with the value of the conversion
+#' @return The value of the conversion
 #' @export
 #'
 #' @examples
@@ -30,10 +30,10 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
 
   date <- ifelse(is.null(date), "", paste0("&date=", as.Date(date)))
 
-  query <- paste0(fixer_url, "convert?access_key=", fixer_api_key(),
-                  "&from", from, "&to", to, "&amount", amount)
+  query <- paste0(
+    fixer_url, "convert?access_key=", fixer_api_key(),
+    "&from", from, "&to", to, "&amount", amount
+  )
 
   df <- jsonlite::fromJSON(query)
-
-
 }

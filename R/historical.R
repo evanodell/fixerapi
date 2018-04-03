@@ -1,10 +1,6 @@
 
 
-
-
-
-
-#' Historical exchange rates
+#' Historic exchange rates
 #'
 #' Historical exchange rates are only available on paid fixer.io accounts.
 #'
@@ -25,7 +21,6 @@
 #' historical <- fixer_historical(date = "2017-05-18")
 #'
 #' }
-#'
 
 fixer_historical <- function(date = NULL, base = "EUR", symbols = NULL) {
   date <- ifelse(is.null(date), "latest", as.Date(date))

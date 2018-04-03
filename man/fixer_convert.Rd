@@ -18,7 +18,7 @@ that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 Defaults to \code{NULL}, which returns the latest conversion data.}
 }
 \value{
-A tibble with the value of the conversion
+The value of the conversion
 }
 \description{
 Currency conversion is only available on paid plans.
