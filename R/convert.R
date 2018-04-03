@@ -6,15 +6,20 @@
 #'
 #' @param from Symbol of currency to convert from.
 #' @param to Symbol of currency to convert to.
-#' @param amount Value of currency to convert. Defaults to 1.
+#' @param amount The numeric value of the \code{from} currency to convert.
+#' Defaults to 1.
 #' @param date Optional variable. A date in YYYY-MM-DD format, or any value
 #' that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 #' Defaults to \code{NULL}, which returns the latest conversion data.
 #'
-#' @return The value of the conversion
+#' @return A list containing the value of the conversion and the exchange rate.
 #' @export
 #'
-#' @examples
+#' @examples \dontrun{
+#'
+#' x <- fixer_convert(from = "GBP", to = "JPY", amount = 25)
+#'
+#' }
 #'
 
 fixer_convert <- function(from, to, amount = 1, date = NULL) {
@@ -36,4 +41,7 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
   )
 
   df <- jsonlite::fromJSON(query)
+
+  df
 }
+

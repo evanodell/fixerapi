@@ -22,18 +22,9 @@
 #' }
 
 fixer_time_series <- function(start_date, end_date,
-                             base = "EUR", symbols = NULL) {
-  if (missing(start_date) || missing(end_date)) {
-    stop("Values for `start_date` and `end_date` parameters must be included",
-      call. = FALSE
-    )
-  }
+                              base = "EUR", symbols = NULL) {
 
-  if (as.numeric(as.Date(end_date) - as.Date(start_date)) > 365) {
-    stop("Only 365 dats of data can be returned at one time",
-      call. = FALSE
-    )
-  }
+  date_check(start_date, end_date)
 
   base_query <- base_util(base)
 
@@ -57,4 +48,3 @@ fixer_time_series <- function(start_date, end_date,
 
   rates
 }
-

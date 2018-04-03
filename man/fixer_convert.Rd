@@ -11,18 +11,24 @@ fixer_convert(from, to, amount = 1, date = NULL)
 
 \item{to}{Symbol of currency to convert to.}
 
-\item{amount}{Value of currency to convert. Defaults to 1.}
+\item{amount}{The numeric value of the \code{from} currency to convert.
+Defaults to 1.}
 
 \item{date}{Optional variable. A date in YYYY-MM-DD format, or any value
 that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 Defaults to \code{NULL}, which returns the latest conversion data.}
 }
 \value{
-The value of the conversion
+A list containing the value of the conversion and the exchange rate.
 }
 \description{
 Currency conversion is only available on paid plans.
 }
 \examples{
+\dontrun{
+
+x <- fixer_convert(from = "GBP", to = "JPY", amount = 25)
+
+}
 
 }
