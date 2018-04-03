@@ -4,7 +4,7 @@ base_util <- function(base) {
   act <- Sys.getenv("FIXER_ACT_TYPE")
 
   if (!identical(act, "free") && !identical(act, "") ||
-      identical(base, "EUR") ) {
+    identical(base, "EUR")) {
     base_query <- paste0("&base=", base)
   } else {
     base_query <- ""

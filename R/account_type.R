@@ -17,7 +17,6 @@
 #' @export
 #'
 fixer_account_type <- function(type = c("free", "paid")) {
-
   act_type <- Sys.getenv("FIXER_ACT_TYPE")
   if (identical(act_type, type)) return(act_type)
 
