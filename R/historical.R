@@ -1,34 +1,41 @@
 
 
-#' Latest exchange rates
+
+
+
+
+#' Historical exchange rates
 #'
-#' Returns a tibble with the most recently available currency conversion data
-#' available from the Fixer API
+#' Historical exchange rates are only available on paid fixer.io accounts.
 #'
+#' @param date A date in YYYY-MM-DD format, or any value that can be coerced
+#' to YYYY-MM-DD format with \code{as.Date()}. Defaults to \code{NULL}, which
+#' returns the latest conversion data.
 #' @param base The base currency to index other currencies against.
 #' Defaults to \code{"EUR"}. Can only be changed with paid plans.
 #' @param symbols The symbols of currencies to return exchange rates for.
 #' Defaults to \code{NULL} and returns all available currencies. See
 #' \code{\link{fixer_symbols}} for details on symbol options.
-#' @return A tibble with the latest available currency exchange data.
+#'
+#' @return A tibble with exchange rates to the base currency on a given date.
 #' @export
 #'
 #' @examples \dontrun{
 #'
-#' today <- fixer_latest()
-#'
-#' today_usd <- fixer_latest(base = "USD")
+#' historical <- fixer_historical(date = "2017-05-18")
 #'
 #' }
 #'
 
-fixer_latest <- function(base = "EUR", symbols = NULL) {
+fixer_historical <- function(date = NULL, base = "EUR", symbols = NULL) {
+  date <- ifelse(is.null(date), "latest", as.Date(date))
+
   base_query <- base_util(base)
 
   symbols_query <- symbols_util(symbols)
 
   query <- paste0(
-    fixer_url, "latest?access_key=", fixer_api_key(),
+    fixer_url, date, "?access_key=", fixer_api_key(),
     base_query, symbols_query
   )
 

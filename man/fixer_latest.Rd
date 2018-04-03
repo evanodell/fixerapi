@@ -2,7 +2,7 @@
 % Please edit documentation in R/latest.R
 \name{fixer_latest}
 \alias{fixer_latest}
-\title{Latest currency data available}
+\title{Latest exchange rates}
 \usage{
 fixer_latest(base = "EUR", symbols = NULL)
 }
@@ -10,11 +10,24 @@ fixer_latest(base = "EUR", symbols = NULL)
 \item{base}{The base currency to index other currencies against.
 Defaults to \code{"EUR"}. Can only be changed with paid plans.}
 
-\item{symbols}{The symbols of currencies to return. Defaults to \code{NULL}
-and returns all available currencies. See \code{\link{fixer_symbols}} for
-details on symbol options.}
+\item{symbols}{The symbols of currencies to return exchange rates for.
+Defaults to \code{NULL} and returns all available currencies. See
+\code{\link{fixer_symbols}} for details on symbol options.}
+}
+\value{
+A tibble with the latest available currency exchange data.
 }
 \description{
 Returns a tibble with the most recently available currency conversion data
 available from the Fixer API
+}
+\examples{
+\dontrun{
+
+today <- fixer_latest()
+
+today_usd <- fixer_latest(base = "USD")
+
+}
+
 }
