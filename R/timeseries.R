@@ -23,6 +23,8 @@
 
 fixer_time_series <- function(start_date, end_date,
                               base = "EUR", symbols = NULL) {
+  time_check()
+
   date_check(start_date, end_date)
 
   base_query <- base_util(base)

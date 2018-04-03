@@ -23,9 +23,7 @@
 #'
 
 fixer_convert <- function(from, to, amount = 1, date = NULL) {
-  if (!identical(act, "free") || identical(act, "")) {
-    stop("Currency conversion is only available on paid plans", call. = FALSE)
-  }
+  free_check()
 
   if (missing(from) || missing(to)) {
     stop("Values for the `from` and `to` parameters must be included",

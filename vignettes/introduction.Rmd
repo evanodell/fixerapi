@@ -1,0 +1,28 @@
+---
+title: "Introduction to `fixerapi`"
+author: "Evan Odell"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+`fixerapi` is a package for accessing data from the [fixer.io](https://fixer.io) currency exchange rate API. The [fixer.io](https://fixer.io) API requires [registration](https://fixer.io/product) and the use of an API key. Free accounts are limited to 10,000 API calls a month, and can only access the most currency conversion rates, using the Euro as the base currency.
+
+
+## Setting a key
+
+## Setting an account type
+
+

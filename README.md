@@ -13,7 +13,7 @@ Status](https://travis-ci.org/evanodell/fixerapi.svg?branch=master)](https://tra
 Status](https://ci.appveyor.com/api/projects/status/github/evanodell/fixerapi?branch=master&svg=true)](https://ci.appveyor.com/project/evanodell/fixerapi)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/evanodell/fixerapi/master.svg)](https://codecov.io/github/evanodell/fixerapi?branch=master)
-<!--[![DOI](https://zenodo.org/badge/72111315.svg)](https://zenodo.org/badge/latestdoi/72111315) -->
+[![DOI](https://zenodo.org/badge/127822432.svg)](https://zenodo.org/badge/latestdoi/127822432)
 
 # fixerapi
 

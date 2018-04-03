@@ -13,7 +13,7 @@ keeping with fixer.io's \href{https://fixer.io/product}{pricing}.}
 }
 \description{
 Paid accounts have access to additional features.
-\code{fixerrr} uses this information to activate paid features like SSL
+\code{fixerapi} uses this information to activate paid features like SSL
 encryption and prevent API calls that are not allowed by a user's account
 type.
 
