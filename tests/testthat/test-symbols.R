@@ -8,5 +8,5 @@ test_that("symbols work", {
   syms <- fixer_symbols()
   expect_equal(length(syms), 2)
   expect_true("USD" %in% syms$name)
-  expect_true(is.tibble(syms))
+  expect_true(tibble::is.tibble(syms))
 })

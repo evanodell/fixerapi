@@ -7,8 +7,10 @@
 fixer_latest(base = "EUR", symbols = NULL)
 }
 \arguments{
-\item{base}{The base currency to index other currencies against.
-Defaults to \code{"EUR"}. Can only be changed with paid plans.}
+\item{base}{The base currency to index other currencies against. Defaults
+to \code{"EUR"}. Can only be changed with paid plans. A warning message
+will be printed if not using a paid plan, but the query will complete using
+Euros as the base currency.}
 
 \item{symbols}{A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
