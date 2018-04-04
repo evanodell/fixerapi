@@ -5,8 +5,10 @@
 #' Returns a tibble with the most recently available currency conversion data
 #' available from the Fixer API
 #'
-#' @param base The base currency to index other currencies against.
-#' Defaults to \code{"EUR"}. Can only be changed with paid plans.
+#' @param base The base currency to index other currencies against. Defaults
+#' to \code{"EUR"}. Can only be changed with paid plans. A warning message
+#' will be printed if not using a paid plan, but the query will complete using
+#' Euros as the base currency.
 #' @param symbols A character vector of the symbols of currencies to return
 #' exchange rates for, or a string for a single currency. Defaults to
 #' \code{NULL} and returns all available currencies. See

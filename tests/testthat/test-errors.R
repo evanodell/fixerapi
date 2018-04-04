@@ -1,6 +1,8 @@
 context("test-errors.R")
 
 test_that("errors works", {
+  skip_on_cran()
+
   expect_error(fixer_account_type(), 'Please use "free" or "paid".')
 
   expect_error(fixer_fluctuation())
