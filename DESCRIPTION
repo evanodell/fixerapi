@@ -1,9 +1,9 @@
 Package: fixerapi
-Version: 0.0.1
+Version: 0.1.0
 Title: An R Client for the Fixer.io Currency API
 Description: An R client for the fixer.io currency conversion API. The API 
   requires registration and some features are only available on paid accounts. 
-  The full documentation is available at <https://fixer.io/documentation>
+  The full documentation is available at <https://fixer.io/documentation>.
 Authors@R: person("Evan", "Odell", 
   email = "evanodell91@gmail.com", role = c("aut", "cre"),
   comment = c(ORCID='0000-0003-1845-808X'))
