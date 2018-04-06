@@ -1,7 +1,9 @@
 
 ## Release summary
 
-This is the first release of the `fixerapi` package, with the version 0.1.0. It provides functions to download data from the fixer.io currency exchange API.
+## Resubmission
+
+This is a resubmission of the `fixerapi` package, with the version 0.1.1, adding quotations to URLs and package names in the title and description, in response to comments on the last submission on 2014-04-03. `fixerapi` provides functions to download data from the fixer.io currency exchange API.
 
 ## Test environments
 * local OS X install, R 3.4.4

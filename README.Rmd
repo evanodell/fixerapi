@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 
 # fixerapi
 
-`fixerapi` is an R client for the [fixer.io](https://fixer.io) currency exchange rate API. The API requires registration and some features are only available on paid accounts. Full API documentation is available [here](https://fixer.io/documentation), and additional details are available in the [vignette](https://docs.evanodell.com/fixerapi/articles/introduction.html)
+`fixerapi` is an R client for the [fixer.io](https://fixer.io) currency conversion and exchange rate API. The API requires registration and some features are only available on paid accounts. Full API documentation is available [here](https://fixer.io/documentation), and additional details are available in the [vignette](https://docs.evanodell.com/fixerapi/articles/introduction.html)
 
 ## Installation
 
