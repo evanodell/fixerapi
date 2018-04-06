@@ -18,10 +18,10 @@ Status](https://img.shields.io/codecov/c/github/evanodell/fixerapi/master.svg)](
 # fixerapi
 
 `fixerapi` is an R client for the [fixer.io](https://fixer.io) currency
-exchange rate API. The API requires registration and some features are
-only available on paid accounts. Full API documentation is available
-[here](https://fixer.io/documentation), and additional details are
-available in the
+conversion and exchange rate API. The API requires registration and some
+features are only available on paid accounts. Full API documentation is
+available [here](https://fixer.io/documentation), and additional details
+are available in the
 [vignette](https://docs.evanodell.com/fixerapi/articles/introduction.html)
 
 ## Installation
