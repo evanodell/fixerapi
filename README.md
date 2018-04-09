@@ -26,6 +26,12 @@ are available in the
 
 ## Installation
 
+To install from CRAN, use:
+
+``` r
+install.packages("fixerapi")
+```
+
 You can install the development version from
 [GitHub](https://github.com/) with:
 
