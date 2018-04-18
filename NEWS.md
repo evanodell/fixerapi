@@ -1,5 +1,12 @@
 
 
+# fixerapi 0.1.3
+
+* Removed need to declare account type
+
+* Fixed error with currency conversion
+
+
 # fixerapi 0.1.2
 
 * Included proper citation information

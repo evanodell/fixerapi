@@ -25,7 +25,7 @@
 fixer_historical <- function(date = NULL, base = "EUR", symbols = NULL) {
   date <- ifelse(is.null(date), "latest", as.Date(date))
 
-  base_query <- base_util(base)
+  base_query <- paste0("&base=", base)
 
   symbols_query <- symbols_util(symbols)
 

@@ -35,7 +35,8 @@ value relative to the base currency on the given date.
 \examples{
 \dontrun{
 
-x <- fixer_time_series(start_date = "2017-04-30", end_date = "2017-06-20")
+x <- fixer_time_series(start_date = "2017-04-30", end_date = "2017-06-20",
+                       base = "GBP", symbols = c("USD", "EUR"))
 
 }
 }

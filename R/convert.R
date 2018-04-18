@@ -32,7 +32,7 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
 
   query <- paste0(
     fixer_url, "convert?access_key=", fixer_api_key(),
-    "&from", from, "&to", to, "&amount", amount
+    "&from=", from, "&to=", to, "&amount=", amount
   )
 
   df <- jsonlite::fromJSON(query)
