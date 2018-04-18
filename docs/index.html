@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">fixerapi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.1</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
       </span>
     </div>
 
@@ -126,9 +126,11 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
+<p>To install from CRAN, use:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">"fixerapi"</span>)</a></code></pre></div>
 <p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages("devtools")</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"evanodell/fixerapi"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"evanodell/fixerapi"</span>)</a></code></pre></div>
 </div>
 <div id="using-fixerapi" class="section level2">
 <h2 class="hasAnchor">
@@ -144,22 +146,33 @@
 <li>Exchange rate fluctuations over a period of up to 365 days, using <code><a href="reference/fixer_fluctuation.html">fixer_fluctuation()</a></code> (available on “professional plus” and “enterprise” grade accounts)</li>
 </ul>
 <p>With the exception of <code><a href="reference/fixer_convert.html">fixer_convert()</a></code>, which is limited to two currencies, all functions give an option for a base currency that is indexed to 1 and other currencies are compared to – the default is the Euro – and to limit the currencies it is compared with, using the <code>symbols</code> parameter, which takes a character vector of currency symbols. If no symbols are specified, all available currencies are returned.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(fixer)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">today_symbols &lt;-<span class="st"> </span><span class="kw"><a href="reference/fixer_latest.html">fixer_latest</a></span>(<span class="dt">base =</span> <span class="st">"EUR"</span>, </a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">                              <span class="dt">symbols =</span> <span class="kw">c</span>(<span class="st">"JPY"</span>, <span class="st">"GBP"</span>, <span class="st">"USD"</span>, <span class="st">"CAD"</span>, <span class="st">"CHF"</span>))</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="kw">print</span>(today_symbols)</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; A tibble: 5 x 2</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;   name    value</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;   &lt;chr&gt;   &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; 1 JPY   131.   </span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; 2 GBP     0.873</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; 3 USD     1.23 </span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; 4 CAD     1.57 </span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; 5 CHF     1.18 </span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(fixer)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">today_symbols &lt;-<span class="st"> </span><span class="kw"><a href="reference/fixer_latest.html">fixer_latest</a></span>(<span class="dt">base =</span> <span class="st">"EUR"</span>, </a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">                              <span class="dt">symbols =</span> <span class="kw">c</span>(<span class="st">"JPY"</span>, <span class="st">"GBP"</span>, <span class="st">"USD"</span>, <span class="st">"CAD"</span>, <span class="st">"CHF"</span>))</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw">print</span>(today_symbols)</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; A tibble: 5 x 2</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;   name    value</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;   &lt;chr&gt;   &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; 1 JPY   131.   </span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; 2 GBP     0.873</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; 3 USD     1.23 </span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt; 4 CAD     1.57 </span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt; 5 CHF     1.18 </span></a></code></pre></div>
 <p>The example above shows some exchange rates on 2018-04-03.</p>
 <p>Please note that this project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+<p>This project is not affiliated with or supported by <a href="https://fixer.io">fixer.io</a>.</p>
+<p>To cite package <code>fixerapi</code> in publications use:</p>
+<p>Evan Odell (2018). fixerapi: An R Client for the “Fixer.io” Currency API. R package version 0.1.2. <a href="https://CRAN.R-project.org/package=fixerapi" class="uri">https://CRAN.R-project.org/package=fixerapi</a></p>
+<p>A BibTeX entry for LaTeX users is</p>
+<pre><code>  @Manual{,
+    title = {fixerapi: An R Client for the "Fixer.io" Currency API},
+    author = {Evan Odell},
+    year = {2018},
+    note = {R package version 0.1.2},
+    url = {https://CRAN.R-project.org/package=fixerapi},
+  }</code></pre>
 </div>
 </div>
   </div>

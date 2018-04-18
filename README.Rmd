@@ -75,4 +75,23 @@ print(today_symbols)
 
 The example above shows some exchange rates on 2018-04-03.
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. 
+
+This project is not affiliated with or supported by [fixer.io](https://fixer.io).
+
+To cite package `fixerapi` in publications use:
+
+  Evan Odell (2018). fixerapi: An R Client for the "Fixer.io" Currency API. R package version 0.1.2.
+  https://CRAN.R-project.org/package=fixerapi
+
+A BibTeX entry for LaTeX users is
+
+```
+  @Manual{,
+    title = {fixerapi: An R Client for the "Fixer.io" Currency API},
+    author = {Evan Odell},
+    year = {2018},
+    note = {R package version 0.1.2},
+    url = {https://CRAN.R-project.org/package=fixerapi},
+  }
+```

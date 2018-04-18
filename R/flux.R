@@ -31,7 +31,7 @@ fixer_fluctuation <- function(start_date, end_date,
                               base = "EUR", symbols = NULL) {
   date_check(start_date, end_date)
 
-  base_query <- base_util(base)
+  base_query <- paste0("&base=", base)
 
   symbols_query <- symbols_util(symbols)
 

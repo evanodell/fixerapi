@@ -17,7 +17,8 @@
 #' @export
 #' @examples \dontrun{
 #'
-#' x <- fixer_time_series(start_date = "2017-04-30", end_date = "2017-06-20")
+#' x <- fixer_time_series(start_date = "2017-04-30", end_date = "2017-06-20",
+#'                        base = "GBP", symbols = c("USD", "EUR"))
 #'
 #' }
 
@@ -25,7 +26,7 @@ fixer_time_series <- function(start_date, end_date,
                               base = "EUR", symbols = NULL) {
   date_check(start_date, end_date)
 
-  base_query <- base_util(base)
+  base_query <- paste0("&base=", base)
 
   symbols_query <- symbols_util(symbols)
 

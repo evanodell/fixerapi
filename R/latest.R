@@ -26,7 +26,7 @@
 #'
 
 fixer_latest <- function(base = "EUR", symbols = NULL) {
-  base_query <- base_util(base)
+  base_query <- paste0("&base=", base)
 
   symbols_query <- symbols_util(symbols)
 

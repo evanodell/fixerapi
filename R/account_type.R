@@ -9,7 +9,7 @@
 #' account type when receiving requests, so setting you account type here only
 #' forces HTTPS instead of HTTP. If you have a paid account but do not set
 #' your account status you will not be able to use the HTTPS connection but
-#' there will be no other affect on your usage of the API.
+#' there will be no other impact on your usage of the API.
 #'
 #' @param type Your \href{https://fixer.io/}{fixer.io} account type. Accepts
 #' one of \code{"free"} or \code{"paid"}.

@@ -8,7 +8,7 @@ date_check <- function(start_date, end_date) {
   }
 
   if (as.numeric(as.Date(end_date) - as.Date(start_date)) > 365) {
-    stop("Only 365 dats of data can be returned at one time",
+    stop("Only 365 days of data can be returned at one time",
       call. = FALSE
     )
   }

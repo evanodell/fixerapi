@@ -1,5 +1,18 @@
 
 
+# fixerapi 0.1.3
+
+* Removed need to declare account type
+
+* Fixed error with currency conversion
+
+
+# fixerapi 0.1.2
+
+* Included proper citation information
+
+* Fixed some spelling mistakes and improved clarity of vignette text
+
 # fixerapi 0.1.1
 
 * Fixed name and description to comply with CRAN policies.
