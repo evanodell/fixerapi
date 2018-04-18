@@ -1,5 +1,9 @@
 
 
+# fixerapi 0.1.4
+
+* Fixed account type missing bug with HTTPS
+
 # fixerapi 0.1.3
 
 * Removed need to declare account type
