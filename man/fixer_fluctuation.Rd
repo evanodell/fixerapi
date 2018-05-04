@@ -12,9 +12,7 @@ fixer_fluctuation(start_date, end_date, base = "EUR", symbols = NULL)
 \item{end_date}{The end date of requested time period.}
 
 \item{base}{The base currency to index other currencies against. Defaults
-to \code{"EUR"}. Can only be changed with paid plans. A warning message
-will be printed if not using a paid plan, but the query will complete using
-Euros as the base currency.}
+to \code{"EUR"}. Other base currencies are only available on paid plans.}
 
 \item{symbols}{A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
@@ -42,4 +40,7 @@ x <- fixer_fluctuation(start_date = "2018-02-25", end_date = "2018-02-26",
 symbols = c("USD", "JPY"))
 
 }
+}
+\seealso{
+fixer_time_series
 }

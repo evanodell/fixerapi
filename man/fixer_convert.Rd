@@ -22,7 +22,10 @@ Defaults to \code{NULL}, which returns the latest conversion data.}
 A list containing the value of the conversion and the exchange rate.
 }
 \description{
-Currency conversion is only available on paid plans.
+Convert from one currency to another, on a given date or
+using the latest available exchange rates.
+
+Currency conversion is available on paid plans.
 }
 \examples{
 \dontrun{

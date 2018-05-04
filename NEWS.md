@@ -1,4 +1,6 @@
+# fixerapi 0.1.5
 
+* 
 
 # fixerapi 0.1.4
 
@@ -8,8 +10,7 @@
 
 * Removed need to declare account type
 
-* Fixed error with currency conversion
-
+* Fixed error that broke `fixer_convert()` function
 
 # fixerapi 0.1.2
 

@@ -2,7 +2,10 @@
 
 #' Convert currencies
 #'
-#' Currency conversion is only available on paid plans.
+#' @description Convert from one currency to another, on a given date or
+#' using the latest available exchange rates.
+#'
+#' @description Currency conversion is available on paid plans.
 #'
 #' @param from Symbol of currency to convert from.
 #' @param to Symbol of currency to convert to.

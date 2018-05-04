@@ -14,5 +14,5 @@ test_that("flux works", {
   flux_error <- expect_error(
     fixer_fluctuation("2016-01-01", "2018-05-03"),
     "Only 365 days of data can be returned at one time"
-    )
+  )
 })

@@ -7,9 +7,13 @@
 #' @description Each currency symbol is displayed in its own column, with a
 #' value relative to the base currency on the given date.
 #'
+#' @description Time series data is only available for "Professional",
+#' "Professional Plus" and "Enterprise" accounts.
+#'
 #' @param start_date The start date of requested time series.
 #' @param end_date The end date of requested time series.
 #' @inheritParams fixer_latest
+#' @seealso fixer_fluctuation
 #'
 #' @return A tibble with the exchange rate from the base currency to the given
 #' currency symbols for each date in the requested range.
