@@ -1,6 +1,11 @@
 # fixerapi 0.1.5
 
-* 
+* Fixed bug with `fixer_convert()` data parameter.
+
+* Improved code coverage and documentation
+
+* `fixer_account_type()` now sets account type as "free" unless "paid" 
+is used as a parameter, rather than giving an error.
 
 # fixerapi 0.1.4
 
@@ -10,7 +15,7 @@
 
 * Removed need to declare account type
 
-* Fixed error that broke `fixer_convert()` function
+* Fixed error that broke entire `fixer_convert()` function
 
 # fixerapi 0.1.2
 

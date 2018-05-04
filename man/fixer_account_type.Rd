@@ -9,7 +9,8 @@ fixer_account_type(type = c("free", "paid"))
 \arguments{
 \item{type}{Your \href{https://fixer.io/}{fixer.io} account type. Accepts
 one of \code{"free"} or \code{"paid"}. If no value or an incorrect value
-is given, account type will be set as \code{"free"}.}
+is given, account type will be set as \code{"free"}. This parameter is not
+case sensitive.}
 }
 \description{
 Paid accounts have access to additional features, including

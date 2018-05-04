@@ -12,7 +12,4 @@ This is the first update of the fixerapi package, with version number 0.1.5. Ver
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-Possibly mis-spelled words in DESCRIPTION:
-  io (3:34, 4:40)
+0 errors | 0 warnings | 0 notes

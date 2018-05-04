@@ -18,7 +18,8 @@
 #'
 #' @param type Your \href{https://fixer.io/}{fixer.io} account type. Accepts
 #' one of \code{"free"} or \code{"paid"}. If no value or an incorrect value
-#' is given, account type will be set as \code{"free"}.
+#' is given, account type will be set as \code{"free"}. This parameter is not
+#' case sensitive.
 #'
 #' @export
 #' @examples \dontrun{

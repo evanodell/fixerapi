@@ -1,5 +1,5 @@
 Package: fixerapi
-Version: 0.1.3
+Version: 0.1.4.9000
 Title: An R Client for the "Fixer.io" Currency API
 Description: An R client for the "fixer.io" currency conversion and exchange 
   rate API. The API requires registration and some features are only available 
