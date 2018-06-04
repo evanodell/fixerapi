@@ -53,8 +53,10 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
 
   df <- jsonlite::fromJSON(query)
 
-  df$info$timestamp <- as.POSIXct(df$info$timestamp, origin = "1970-01-01",
-                                  tz = Sys.timezone())
+  df$info$timestamp <- as.POSIXct(df$info$timestamp,
+    origin = "1970-01-01",
+    tz = Sys.timezone()
+  )
 
   df
 }
