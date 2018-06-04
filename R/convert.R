@@ -5,7 +5,7 @@
 #' @description Convert from one currency to another, on a given date or
 #' using the latest available exchange rates.
 #'
-#' @description Currency conversion is available on paid plans.
+#' @description Currency conversion is available on all paid plans.
 #'
 #' @param from Symbol of currency to convert from.
 #' @param to Symbol of currency to convert to.
@@ -15,7 +15,8 @@
 #' that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 #' Defaults to \code{NULL}, which returns the latest conversion data.
 #'
-#' @return A list containing the value of the conversion and the exchange rate.
+#' @return A list containing the value of the conversion, the exchange rate
+#' and the date and time of the currency conversion.
 #' @export
 #'
 #' @examples \dontrun{
@@ -31,15 +32,15 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
     )
   }
 
-  if(as.numeric(amount) >= 100000) {
+  if (as.numeric(amount) >= 100000) {
     stop("The conversion end point only works for values under 100,000.",
-         call. = FALSE
+      call. = FALSE
     )
   }
 
-  if(as.numeric(amount) <= 0) {
+  if (as.numeric(amount) <= 0) {
     stop("The conversion end point only works for values greater than 0.",
-         call. = FALSE
+      call. = FALSE
     )
   }
 
@@ -51,6 +52,9 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
   )
 
   df <- jsonlite::fromJSON(query)
+
+  df$info$timestamp <- as.POSIXct(df$info$timestamp, origin = "1970-01-01",
+                                  tz = Sys.timezone())
 
   df
 }

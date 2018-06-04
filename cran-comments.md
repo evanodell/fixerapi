@@ -3,7 +3,7 @@
 
 ## Resubmission
 
-This is the first update of the fixerapi package, with version number 0.1.5. Version 0.1.1 was  	published on CRAN on 2018-04-06. This release fixes bugs in the `fixer_convert()` function in the original CRAN release and improves testing coverage and documentation.
+This is the first update of the fixerapi package, with version number 0.1.5. Version 0.1.1 was published on CRAN on 2018-04-06. This release fixes bugs in the `fixer_convert()` function in the original CRAN release and improves testing coverage and documentation.
 
 ## Test environments
 * local OS X install, R 3.5.0

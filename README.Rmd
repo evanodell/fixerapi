@@ -38,8 +38,8 @@ install.packages("fixerapi")
 You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("evanodell/fixerapi")
+# install.packages("remotes")
+remotes::install_github("evanodell/fixerapi")
 ```
 ## Using `fixerapi`
 

@@ -19,13 +19,14 @@ that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 Defaults to \code{NULL}, which returns the latest conversion data.}
 }
 \value{
-A list containing the value of the conversion and the exchange rate.
+A list containing the value of the conversion, the exchange rate
+and the date and time of the currency conversion.
 }
 \description{
 Convert from one currency to another, on a given date or
 using the latest available exchange rates.
 
-Currency conversion is available on paid plans.
+Currency conversion is available on all paid plans.
 }
 \examples{
 \dontrun{
