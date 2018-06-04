@@ -10,7 +10,7 @@
 #' @param from Symbol of currency to convert from.
 #' @param to Symbol of currency to convert to.
 #' @param amount The numeric value of the \code{from} currency to convert.
-#' Defaults to 1.
+#' Defaults to 1, and accepts integers greater than 0 and less than 100000.
 #' @param date Optional variable. A date in YYYY-MM-DD format, or any value
 #' that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
 #' Defaults to \code{NULL}, which returns the latest conversion data.
@@ -28,6 +28,18 @@ fixer_convert <- function(from, to, amount = 1, date = NULL) {
   if (missing(from) || missing(to)) {
     stop("Values for the `from` and `to` parameters must be included",
       call. = FALSE
+    )
+  }
+
+  if(as.numeric(amount) >= 100000) {
+    stop("The conversion end point only works for values under 100,000.",
+         call. = FALSE
+    )
+  }
+
+  if(as.numeric(amount) <= 0) {
+    stop("The conversion end point only works for values greater than 0.",
+         call. = FALSE
     )
   }
 

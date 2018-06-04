@@ -12,7 +12,7 @@ fixer_convert(from, to, amount = 1, date = NULL)
 \item{to}{Symbol of currency to convert to.}
 
 \item{amount}{The numeric value of the \code{from} currency to convert.
-Defaults to 1.}
+Defaults to 1, and accepts integers greater than 0 and less than 100000.}
 
 \item{date}{Optional variable. A date in YYYY-MM-DD format, or any value
 that can be coerced to YYYY-MM-DD format with \code{as.Date()}.
