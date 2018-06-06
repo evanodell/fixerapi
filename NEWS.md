@@ -1,3 +1,11 @@
+
+# fixerapi 0.1.5.9000
+
+* Added error messages to `fixer_convert()` for amounts >=100,000 and <=0.
+
+* Added conversion from UNIX time to yyyy-mm-dd HH:mm:ss for `fixer_convert()`.
+
+
 # fixerapi 0.1.5
 
 * Fixed bug with `fixer_convert()` data parameter.
