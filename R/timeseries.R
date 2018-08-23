@@ -7,9 +7,15 @@
 #' @description Each currency symbol is displayed in its own column, with a
 #' value relative to the base currency on the given date.
 #'
-#' @param start_date The start date of requested time series.
-#' @param end_date The end date of requested time series.
+#' @description Time series data is only available for "Professional",
+#' "Professional Plus" and "Enterprise" accounts.
+#'
+#' @param start_date The start date of requested time series, in "YYYY-MM-DD"
+#' style, or any style convertable to  "YYYY-MM-DD" using \code{as.Date()}.
+#' @param end_date The end date of requested time series, in "YYYY-MM-DD"
+#' style, or any style convertable to  "YYYY-MM-DD" using \code{as.Date()}.
 #' @inheritParams fixer_latest
+#' @seealso fixer_fluctuation
 #'
 #' @return A tibble with the exchange rate from the base currency to the given
 #' currency symbols for each date in the requested range.
@@ -24,7 +30,7 @@
 
 fixer_time_series <- function(start_date, end_date,
                               base = "EUR", symbols = NULL) {
-  date_check(start_date, end_date)
+  date_query <- date_check(start_date, end_date)
 
   base_query <- paste0("&base=", base)
 

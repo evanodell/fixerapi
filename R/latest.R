@@ -2,17 +2,17 @@
 
 #' Latest exchange rates
 #'
-#' Returns a tibble with the most recently available currency conversion data
-#' available from the Fixer API
+#' @description Returns a tibble with the most recently available currency
+#' conversion data available from the Fixer API.
 #'
 #' @param base The base currency to index other currencies against. Defaults
-#' to \code{"EUR"}. Can only be changed with paid plans. A warning message
-#' will be printed if not using a paid plan, but the query will complete using
-#' Euros as the base currency.
+#' to \code{"EUR"}. Other base currencies are only available on paid plans.
+#'
 #' @param symbols A character vector of the symbols of currencies to return
 #' exchange rates for, or a string for a single currency. Defaults to
 #' \code{NULL} and returns all available currencies. See
 #' \code{\link{fixer_symbols}} for details on symbol options.
+#'
 #' @return A tibble with the latest available currency exchange data.
 #' @export
 #'
@@ -22,8 +22,10 @@
 #'
 #' today_usd <- fixer_latest(base = "USD")
 #'
-#' }
+#' today_symbols <- fixer_latest(base = "USD",
+#'                               symbols = c("EUR", "JPY", "CAD"))
 #'
+#' }
 
 fixer_latest <- function(base = "EUR", symbols = NULL) {
   base_query <- paste0("&base=", base)

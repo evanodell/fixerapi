@@ -8,9 +8,7 @@ fixer_latest(base = "EUR", symbols = NULL)
 }
 \arguments{
 \item{base}{The base currency to index other currencies against. Defaults
-to \code{"EUR"}. Can only be changed with paid plans. A warning message
-will be printed if not using a paid plan, but the query will complete using
-Euros as the base currency.}
+to \code{"EUR"}. Other base currencies are only available on paid plans.}
 
 \item{symbols}{A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
@@ -21,8 +19,8 @@ exchange rates for, or a string for a single currency. Defaults to
 A tibble with the latest available currency exchange data.
 }
 \description{
-Returns a tibble with the most recently available currency conversion data
-available from the Fixer API
+Returns a tibble with the most recently available currency
+conversion data available from the Fixer API.
 }
 \examples{
 \dontrun{
@@ -31,6 +29,8 @@ today <- fixer_latest()
 
 today_usd <- fixer_latest(base = "USD")
 
-}
+today_symbols <- fixer_latest(base = "USD",
+                              symbols = c("EUR", "JPY", "CAD"))
 
+}
 }

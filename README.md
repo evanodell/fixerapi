@@ -36,8 +36,8 @@ You can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("evanodell/fixerapi")
+# install.packages("remotes")
+remotes::install_github("evanodell/fixerapi")
 ```
 
 ## Using `fixerapi`
@@ -98,18 +98,20 @@ This project is not affiliated with or supported by
 
 To cite package `fixerapi` in publications use:
 
-Evan Odell (2018). fixerapi: An R Client for the “Fixer.io” Currency
-API. R package version 0.1.2.
-<https://CRAN.R-project.org/package=fixerapi>
+Odell E (2018). *fixerapi: An R Client for the “Fixer.io” Currency API*.
+doi: 10.5281/zenodo.1211687 (URL:
+<http://doi.org/10.5281/zenodo.1211687>), R package version 0.1.6,
+\<URL: <https://docs.evanodell.com/fixerapi>\>.
 
 A BibTeX entry for LaTeX users is
 
 ``` 
   @Manual{,
-    title = {fixerapi: An R Client for the "Fixer.io" Currency API},
+    title = {{fixerapi}: An R Client for the "Fixer.io" Currency API},
     author = {Evan Odell},
     year = {2018},
-    note = {R package version 0.1.2},
-    url = {https://CRAN.R-project.org/package=fixerapi},
+    note = {R package version 0.1.6},
+    doi = {10.5281/zenodo.1211687},
+    url = {https://docs.evanodell.com/fixerapi},
   }
 ```

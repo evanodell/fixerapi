@@ -21,10 +21,15 @@
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Set account type — fixer_account_type" />
 
 <meta property="og:description" content="Paid accounts have access to additional features.
@@ -33,8 +38,9 @@ The fixer.io API still checks the
 account type when receiving requests, so setting you account type here only
 forces HTTPS instead of HTTP. If you have a paid account but do not set
 your account status you will not be able to use the HTTPS connection but
-there will be no other affect on your usage of the API." />
+there will be no other impact on your usage of the API." />
 <meta name="twitter:card" content="summary" />
+
 
 
 <!-- mathjax -->
@@ -46,19 +52,15 @@ there will be no other affect on your usage of the API." />
 <![endif]-->
 
 
-<!-- Google analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90706059-1"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-90706059-1', 'auto');
-  ga('send', 'pageview');
-
+  gtag('config', 'UA-90706059-1');
 </script>
-
-
 
   </head>
 
@@ -75,7 +77,7 @@ there will be no other affect on your usage of the API." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fixerapi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -120,6 +122,9 @@ there will be no other affect on your usage of the API." />
       <a href="http://docs.evanodell.com/fixerapi">fixerapi</a>
     </li>
     <li>
+      <a href="http://docs.evanodell.com/refuge">refuge</a>
+    </li>
+    <li>
       <a href="http://docs.evanodell.com/emisc">emisc</a>
     </li>
   </ul>
@@ -153,8 +158,10 @@ there will be no other affect on your usage of the API." />
     <div class="page-header">
     <h1>Set account type</h1>
     
+    <div class="hidden name"><code>fixer_account_type.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Paid accounts have access to additional features.
 <code>fixerapi</code> uses this information to activate SSL encryption.</p>
@@ -162,8 +169,9 @@ there will be no other affect on your usage of the API." />
 account type when receiving requests, so setting you account type here only
 forces HTTPS instead of HTTP. If you have a paid account but do not set
 your account status you will not be able to use the HTTPS connection but
-there will be no other affect on your usage of the API.</p>
+there will be no other impact on your usage of the API.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>fixer_account_type</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"free"</span>, <span class='st'>"paid"</span>))</pre>
     

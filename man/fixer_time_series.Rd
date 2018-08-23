@@ -7,14 +7,14 @@
 fixer_time_series(start_date, end_date, base = "EUR", symbols = NULL)
 }
 \arguments{
-\item{start_date}{The start date of requested time series.}
+\item{start_date}{The start date of requested time series, in "YYYY-MM-DD"
+style, or any style convertable to  "YYYY-MM-DD" using \code{as.Date()}.}
 
-\item{end_date}{The end date of requested time series.}
+\item{end_date}{The end date of requested time series, in "YYYY-MM-DD"
+style, or any style convertable to  "YYYY-MM-DD" using \code{as.Date()}.}
 
 \item{base}{The base currency to index other currencies against. Defaults
-to \code{"EUR"}. Can only be changed with paid plans. A warning message
-will be printed if not using a paid plan, but the query will complete using
-Euros as the base currency.}
+to \code{"EUR"}. Other base currencies are only available on paid plans.}
 
 \item{symbols}{A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
@@ -31,6 +31,9 @@ above plans. The maximum allowed length in a single request is 365 days.
 
 Each currency symbol is displayed in its own column, with a
 value relative to the base currency on the given date.
+
+Time series data is only available for "Professional",
+"Professional Plus" and "Enterprise" accounts.
 }
 \examples{
 \dontrun{
@@ -39,4 +42,7 @@ x <- fixer_time_series(start_date = "2017-04-30", end_date = "2017-06-20",
                        base = "GBP", symbols = c("USD", "EUR"))
 
 }
+}
+\seealso{
+fixer_fluctuation
 }
