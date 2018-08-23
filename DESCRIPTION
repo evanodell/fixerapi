@@ -9,20 +9,20 @@ Authors@R: person("Evan", "Odell",
   email = "evanodell91@gmail.com", role = c("aut", "cre"),
   comment = c(ORCID='0000-0003-1845-808X'))
 License: MIT + file LICENSE
-Encoding: UTF-8
+URL: https://docs.evanodell.com/fixerapi
+BugReports: https://github.com/evanodell/fixerapi/issues
 LazyData: true
 ByteCompile: true
+Imports: 
+    jsonlite,
+    tibble,
+    tidyr
 Suggests: 
     testthat,
     covr,
     knitr,
     rmarkdown
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
-URL:  https://docs.evanodell.com/fixerapi
-BugReports: https://github.com/evanodell/fixerapi/issues
-Imports: 
-    jsonlite,
-    tibble,
-    tidyr
+RoxygenNote: 6.1.0
+Encoding: UTF-8
 VignetteBuilder: knitr

@@ -23,14 +23,14 @@
 #' }
 
 fixer_historical <- function(date = NULL, base = "EUR", symbols = NULL) {
-  date <- ifelse(is.null(date), "latest", as.Date(date))
+  date_query <- ifelse(is.null(date), "latest", as.character(date))
 
   base_query <- paste0("&base=", base)
 
   symbols_query <- symbols_util(symbols)
 
   query <- paste0(
-    fixer_url, date, "?access_key=", fixer_api_key(),
+    fixer_url, date_query, "?access_key=", fixer_api_key(),
     base_query, symbols_query
   )
 
