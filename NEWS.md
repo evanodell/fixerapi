@@ -2,7 +2,7 @@
 # fixerapi 0.1.6
 
 * Fixed #1, where `ifelse()` stripping attributes from variables caused errors
-  in `fixer_historical()`.
+  in `fixer_historical()` (thanks @mhasanbulli).
 
 * Added error messages to `fixer_convert()` for amounts >=100,000 and <=0.
 
