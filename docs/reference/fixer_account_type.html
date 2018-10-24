@@ -32,13 +32,18 @@
 
 <meta property="og:title" content="Set account type — fixer_account_type" />
 
-<meta property="og:description" content="Paid accounts have access to additional features.
-fixerapi uses this information to activate SSL encryption.
+<meta property="og:description" content="Paid accounts have access to additional features, including
+SSL encryption of API requests using HTTPS. Account type must be set in
+order to use HTTPS requests. Setting account type to &quot;paid&quot; when
+using a free account will result in an error, even on features available to
+free accounts. Setting account type to &quot;free&quot; when using a paid
+account will have no impact on requests aside from using HTTP instead of
+HTTPS to access the API. If you have a paid account but do not set
+your account status you will not be able to use the HTTPS connection but
+there will be no other impact on your usage of the API.
 The fixer.io API still checks the
 account type when receiving requests, so setting you account type here only
-forces HTTPS instead of HTTP. If you have a paid account but do not set
-your account status you will not be able to use the HTTPS connection but
-there will be no other impact on your usage of the API." />
+forces HTTPS instead of HTTP." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -77,7 +82,7 @@ there will be no other impact on your usage of the API." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fixerapi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.6</span>
       </span>
     </div>
 
@@ -163,13 +168,18 @@ there will be no other impact on your usage of the API." />
 
     <div class="ref-description">
     
-    <p>Paid accounts have access to additional features.
-<code>fixerapi</code> uses this information to activate SSL encryption.</p>
-<p>The <a href='https://fixer.io/'>fixer.io</a> API still checks the
-account type when receiving requests, so setting you account type here only
-forces HTTPS instead of HTTP. If you have a paid account but do not set
+    <p>Paid accounts have access to additional features, including
+SSL encryption of API requests using HTTPS. Account type must be set in
+order to use HTTPS requests. Setting account type to <code>"paid"</code> when
+using a free account will result in an error, even on features available to
+free accounts. Setting account type to <code>"free"</code> when using a paid
+account will have no impact on requests aside from using HTTP instead of
+HTTPS to access the API. If you have a paid account but do not set
 your account status you will not be able to use the HTTPS connection but
 there will be no other impact on your usage of the API.</p>
+<p>The <a href='https://fixer.io/'>fixer.io</a> API still checks the
+account type when receiving requests, so setting you account type here only
+forces HTTPS instead of HTTP.</p>
     
     </div>
 
@@ -181,17 +191,25 @@ there will be no other impact on your usage of the API.</p>
     <tr>
       <th>type</th>
       <td><p>Your <a href='https://fixer.io/'>fixer.io</a> account type. Accepts
-one of <code>"free"</code> or <code>"paid"</code>.</p></td>
+one of <code>"free"</code> or <code>"paid"</code>. If no value or an incorrect value
+is given, account type will be set as <code>"free"</code>. This parameter is not
+case sensitive.</p></td>
     </tr>
     </table>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'>fixer_account_type</span>(<span class='st'>"paid"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-                </ul>
+            
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

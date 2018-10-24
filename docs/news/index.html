@@ -68,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fixerapi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.6</span>
       </span>
     </div>
 
@@ -151,13 +151,43 @@
       
     </div>
 
+    <div id="fixerapi-0-1-6" class="section level1">
+<h1 class="page-header">
+<a href="#fixerapi-0-1-6" class="anchor"></a>fixerapi 0.1.6<small> 2018-08-23 </small>
+</h1>
+<ul>
+<li><p>Fixed #1, where <code>ifelse()</code> stripping attributes from variables caused errors in <code><a href="../reference/fixer_historical.html">fixer_historical()</a></code>.</p></li>
+<li><p>Added error messages to <code><a href="../reference/fixer_convert.html">fixer_convert()</a></code> for amounts &gt;=100,000 and &lt;=0.</p></li>
+<li><p>Added conversion from UNIX time to yyyy-mm-dd HH:mm:ss for <code><a href="../reference/fixer_convert.html">fixer_convert()</a></code>.</p></li>
+<li><p>Improved date handling in <code><a href="../reference/fixer_fluctuation.html">fixer_fluctuation()</a></code> and <code><a href="../reference/fixer_time_series.html">fixer_time_series()</a></code>.</p></li>
+<li><p>Increased test scenarios.</p></li>
+</ul>
+</div>
+    <div id="fixerapi-0-1-5" class="section level1">
+<h1 class="page-header">
+<a href="#fixerapi-0-1-5" class="anchor"></a>fixerapi 0.1.5<small> 2018-05-04 </small>
+</h1>
+<ul>
+<li><p>Fixed bug with <code><a href="../reference/fixer_convert.html">fixer_convert()</a></code> data parameter.</p></li>
+<li><p>Improved code coverage and documentation</p></li>
+<li><p><code><a href="../reference/fixer_account_type.html">fixer_account_type()</a></code> now sets account type as “free” unless “paid” is used as a parameter, rather than giving an error.</p></li>
+</ul>
+</div>
+    <div id="fixerapi-0-1-4" class="section level1">
+<h1 class="page-header">
+<a href="#fixerapi-0-1-4" class="anchor"></a>fixerapi 0.1.4<small> Unreleased </small>
+</h1>
+<ul>
+<li>Fixed account type missing bug with HTTPS</li>
+</ul>
+</div>
     <div id="fixerapi-0-1-3" class="section level1">
 <h1 class="page-header">
 <a href="#fixerapi-0-1-3" class="anchor"></a>fixerapi 0.1.3<small> Unreleased </small>
 </h1>
 <ul>
 <li><p>Removed need to declare account type</p></li>
-<li><p>Fixed error with currency conversion</p></li>
+<li><p>Fixed error that broke entire <code><a href="../reference/fixer_convert.html">fixer_convert()</a></code> function</p></li>
 </ul>
 </div>
     <div id="fixerapi-0-1-2" class="section level1">
@@ -192,6 +222,9 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#fixerapi-0-1-6">0.1.6</a></li>
+        <li><a href="#fixerapi-0-1-5">0.1.5</a></li>
+        <li><a href="#fixerapi-0-1-4">0.1.4</a></li>
         <li><a href="#fixerapi-0-1-3">0.1.3</a></li>
         <li><a href="#fixerapi-0-1-2">0.1.2</a></li>
         <li><a href="#fixerapi-0-1-1">0.1.1</a></li>

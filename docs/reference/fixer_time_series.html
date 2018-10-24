@@ -35,7 +35,9 @@
 <meta property="og:description" content="Time series plans are only available on &quot;professional&quot; and
 above plans. The maximum allowed length in a single request is 365 days.
 Each currency symbol is displayed in its own column, with a
-value relative to the base currency on the given date." />
+value relative to the base currency on the given date.
+Time series data is only available for &quot;Professional&quot;,
+&quot;Professional Plus&quot; and &quot;Enterprise&quot; accounts." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -74,7 +76,7 @@ value relative to the base currency on the given date." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fixerapi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.6</span>
       </span>
     </div>
 
@@ -164,6 +166,8 @@ value relative to the base currency on the given date." />
 above plans. The maximum allowed length in a single request is 365 days.</p>
 <p>Each currency symbol is displayed in its own column, with a
 value relative to the base currency on the given date.</p>
+<p>Time series data is only available for "Professional",
+"Professional Plus" and "Enterprise" accounts.</p>
     
     </div>
 
@@ -174,25 +178,25 @@ value relative to the base currency on the given date.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>start_date</th>
-      <td><p>The start date of requested time series.</p></td>
+      <td><p>The start date of requested time series, in "YYYY-MM-DD"
+style, or any style convertable to  "YYYY-MM-DD" using <code>as.Date()</code>.</p></td>
     </tr>
     <tr>
       <th>end_date</th>
-      <td><p>The end date of requested time series.</p></td>
+      <td><p>The end date of requested time series, in "YYYY-MM-DD"
+style, or any style convertable to  "YYYY-MM-DD" using <code>as.Date()</code>.</p></td>
     </tr>
     <tr>
       <th>base</th>
       <td><p>The base currency to index other currencies against. Defaults
-to <code>"EUR"</code>. Can only be changed with paid plans. A warning message
-will be printed if not using a paid plan, but the query will complete using
-Euros as the base currency.</p></td>
+to <code>"EUR"</code>. Other base currencies are only available on paid plans.</p></td>
     </tr>
     <tr>
       <th>symbols</th>
       <td><p>A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
 <code>NULL</code> and returns all available currencies. See
-<code>fixer_symbols</code> for details on symbol options.</p></td>
+<code><a href='fixer_symbols.html'>fixer_symbols</a></code> for details on symbol options.</p></td>
     </tr>
     </table>
     
@@ -200,6 +204,10 @@ exchange rates for, or a string for a single currency. Defaults to
 
     <p>A tibble with the exchange rate from the base currency to the given
 currency symbols for each date in the requested range.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>fixer_fluctuation</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -215,6 +223,8 @@ currency symbols for each date in the requested range.</p>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

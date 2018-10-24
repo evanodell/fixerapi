@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fixerapi</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.6</span>
       </span>
     </div>
 
@@ -117,7 +117,7 @@
 </h1>
                         <h4 class="author">Evan Odell</h4>
             
-            <h4 class="date">2018-08-06</h4>
+            <h4 class="date">2018-10-20</h4>
       
       
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -133,30 +133,30 @@
 <div id="setting-a-key" class="section level2">
 <h2 class="hasAnchor">
 <a href="#setting-a-key" class="anchor"></a>Setting a key</h2>
-<p>Set your <a href="https://fixer.io">fixer.io</a> API key with the <code>fixer_api_key()</code> function, or with <code>Sys.setenv(FIXER_API_KEY = &lt;key&gt;)</code>. You can find your key on your <a href="https://fixer.io/dashboard">fixer.io dashboard</a>.</p>
+<p>Set your <a href="https://fixer.io">fixer.io</a> API key with the <code><a href="../reference/fixer_api_key.html">fixer_api_key()</a></code> function, or with <code>Sys.setenv(FIXER_API_KEY = &lt;key&gt;)</code>. You can find your key on your <a href="https://fixer.io/dashboard">fixer.io dashboard</a>.</p>
 </div>
 <div id="setting-an-account-type" class="section level2">
 <h2 class="hasAnchor">
 <a href="#setting-an-account-type" class="anchor"></a>Setting an account type</h2>
-<p>If you have a paid account, setting your account type to “paid” with <code>fixer_account_type("paid")</code> switches to SSL connections over HTTPS, instead of the HTTP connection used by free accounts. Setting your account type does not have any other effects on your ability to use the <a href="https://fixer.io">fixer.io</a> API. Features limited to certain levels of account are automatically limited by the Fixer API itself, and will return warning messages indicating as such.</p>
+<p>If you have a paid account, setting your account type to “paid” with <code><a href="../reference/fixer_account_type.html">fixer_account_type("paid")</a></code> switches to SSL connections over HTTPS, instead of the HTTP connection used by free accounts. Setting your account type does not have any other effects on your ability to use the <a href="https://fixer.io">fixer.io</a> API. Features limited to certain levels of account are automatically limited by the Fixer API itself, and will return warning messages indicating as such.</p>
 </div>
 </div>
 <div id="using-fixerapi" class="section level1">
 <h1 class="hasAnchor">
 <a href="#using-fixerapi" class="anchor"></a>Using <code>fixerapi</code>
 </h1>
-<p>To access a <code>tibble</code> with the name and currency symbol (a three letter code) for all currencies available through the API, use <code>fixer_symbols()</code>.</p>
+<p>To access a <code>tibble</code> with the name and currency symbol (a three letter code) for all currencies available through the API, use <code><a href="../reference/fixer_symbols.html">fixer_symbols()</a></code>.</p>
 <p>There are five currency exchange query types, which <a href="https://fixer.io">fixer.io</a> calls endpoints. They are:</p>
 <ul>
-<li>Current exchange rates, accessed using <code>fixer_latest()</code> (available with free account)</li>
-<li>Historical exchange rates on a given date, using <code>fixer_historical()</code> (available on all paid accounts)</li>
-<li>Conversion from one currency to another, either currently or on a specific date, using <code>fixer_convert()</code> (available on all paid accounts)</li>
-<li>A time series of up to 365 days showing daily exchange rates over that time, using <code>fixer_time_series()</code> (available on “professional” and higher grade accounts)</li>
-<li>Exchange rate fluctuations over a period of up to 365 days, using <code>fixer_fluctuation()</code> (available on “professional plus” and “enterprise” grade accounts)</li>
+<li>Current exchange rates, accessed using <code><a href="../reference/fixer_latest.html">fixer_latest()</a></code> (available with free account)</li>
+<li>Historical exchange rates on a given date, using <code><a href="../reference/fixer_historical.html">fixer_historical()</a></code> (available on all paid accounts)</li>
+<li>Conversion from one currency to another, either currently or on a specific date, using <code><a href="../reference/fixer_convert.html">fixer_convert()</a></code> (available on all paid accounts)</li>
+<li>A time series of up to 365 days showing daily exchange rates over that time, using <code><a href="../reference/fixer_time_series.html">fixer_time_series()</a></code> (available on “professional” and higher grade accounts)</li>
+<li>Exchange rate fluctuations over a period of up to 365 days, using <code><a href="../reference/fixer_fluctuation.html">fixer_fluctuation()</a></code> (available on “professional plus” and “enterprise” grade accounts)</li>
 </ul>
-<p>With the exception of <code>fixer_convert()</code>, which is limited to two currencies, all functions give an option for a base currency that is indexed to 1 and other currencies are compared to – the default is the Euro – and an option to limit the currencies it is compared with, using the <code>symbols</code> parameter, which takes a character vector of currency symbols. If no symbols are specified, all available currencies are returned.</p>
+<p>With the exception of <code><a href="../reference/fixer_convert.html">fixer_convert()</a></code>, which is limited to two currencies, all functions give an option for a base currency that is indexed to 1 and other currencies are compared to – the default is the Euro – and an option to limit the currencies it is compared with, using the <code>symbols</code> parameter, which takes a character vector of currency symbols. If no symbols are specified, all available currencies are returned.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(fixer)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">today_symbols &lt;-<span class="st"> </span><span class="kw">fixer_latest</span>(<span class="dt">base =</span> <span class="st">"EUR"</span>, </a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">today_symbols &lt;-<span class="st"> </span><span class="kw"><a href="../reference/fixer_latest.html">fixer_latest</a></span>(<span class="dt">base =</span> <span class="st">"EUR"</span>, </a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">                              <span class="dt">symbols =</span> <span class="kw">c</span>(<span class="st">"JPY"</span>, <span class="st">"GBP"</span>, <span class="st">"USD"</span>, <span class="st">"CAD"</span>, <span class="st">"CHF"</span>))</a>
 <a class="sourceLine" id="cb1-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">print</span>(today_symbols)</a>
@@ -171,7 +171,7 @@
 <a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt; 5 CHF     1.18 </span></a>
 <a class="sourceLine" id="cb1-15" data-line-number="15"></a>
 <a class="sourceLine" id="cb1-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb1-17" data-line-number="17">today_all &lt;-<span class="st"> </span><span class="kw">fixer_latest</span>(<span class="dt">base =</span> <span class="st">"EUR"</span>)</a>
+<a class="sourceLine" id="cb1-17" data-line-number="17">today_all &lt;-<span class="st"> </span><span class="kw"><a href="../reference/fixer_latest.html">fixer_latest</a></span>(<span class="dt">base =</span> <span class="st">"EUR"</span>)</a>
 <a class="sourceLine" id="cb1-18" data-line-number="18"></a>
 <a class="sourceLine" id="cb1-19" data-line-number="19"><span class="kw">print</span>(today_all)</a>
 <a class="sourceLine" id="cb1-20" data-line-number="20"></a>
@@ -190,7 +190,7 @@
 <a class="sourceLine" id="cb1-33" data-line-number="33"><span class="co">#&gt; 10 AZN     2.09</span></a>
 <a class="sourceLine" id="cb1-34" data-line-number="34"><span class="co">#&gt; ... with 158 more rows</span></a></code></pre></div>
 <p>The example above shows the exchange rates on 2018-04-03.</p>
-<p>Free accounts are limited to the <code>fixer_latest()</code> function, and cannot change the base currency. Free accounts come with 10,000 calls per month, paid accounts with more, depending on the level of the paid account.</p>
+<p>Free accounts are limited to the <code><a href="../reference/fixer_latest.html">fixer_latest()</a></code> function, and cannot change the base currency. Free accounts come with 10,000 calls per month, paid accounts with more, depending on the level of the paid account.</p>
 <p>Full documentation for the API itself is available <a href="https://fixer.io/documentation">on the Fixer website</a>, along with the <a href="https://fixer.io/product">signup</a>.</p>
 </div>
   </div>
