@@ -7,7 +7,7 @@
 #'
 #' @export
 fixer_symbols <- function() {
-  query <- paste0(fixer_url, "symbols?access_key=", fixer_api_key())
+  query <- paste0(fixer_url, "symbols?access_key=", getOption("fixer.API.key"))
 
   symbols <- fromJSON(query, flatten = TRUE)
 

@@ -6,12 +6,12 @@
 #' conversion data available from the Fixer API.
 #'
 #' @param base The base currency to index other currencies against. Defaults
-#' to \code{"EUR"}. Other base currencies are only available on paid plans.
+#' to `"EUR"`. Other base currencies are only available on paid plans.
 #'
 #' @param symbols A character vector of the symbols of currencies to return
 #' exchange rates for, or a string for a single currency. Defaults to
-#' \code{NULL} and returns all available currencies. See
-#' \code{\link{fixer_symbols}} for details on symbol options.
+#' `NULL` and returns all available currencies. See
+#' [fixer_symbols()] for details on symbol options.
 #'
 #' @return A tibble with the latest available currency exchange data.
 #' @export
@@ -32,14 +32,11 @@ fixer_latest <- function(base = "EUR", symbols = NULL) {
 
   symbols_query <- symbols_util(symbols)
 
-  query <- paste0(
-    fixer_url, "latest?access_key=", fixer_api_key(),
+  query <- paste0("latest?access_key=", getOption("fixer.API.key"),
     base_query, symbols_query
   )
 
-  df <- jsonlite::fromJSON(query)
-
-  df <- success_check(df)
+  df <- fixer_download(query)
 
   rates <- tibble::enframe(df$rates)
 

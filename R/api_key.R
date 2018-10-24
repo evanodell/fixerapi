@@ -1,27 +1,38 @@
 
 #' Fixer API Key
 #'
-#' \href{https://fixer.io}{fixer.io} requires an API key, which is saved as an
-#' environmental variable. In interactive mode, using \code{fixer_api_key}
+#' [fixer.io](https://fixer.io/) requires an API key, which is saved as an
+#' environmental variable. In interactive mode, using `fixer_api_key`
 #' will prompt you to enter an API key. You can also use
-#' \code{Sys.setenv(FIXER_API_KEY = <key>)} to set the API key.
+#' `Sys.setenv(FIXER_API_KEY = <key>)` to set the API key.
 #'
-#' @param force If \code{TRUE}, resets the API key and requires a new key to
-#' be provided, even if one already exists. If \code{FALSE} and an API key
+#' By default `fixerapi` will look for the environment variable
+#'   `FIXER_API_KEY` when the package is loaded.
+#'
+#' @param force If `TRUE`, resets the API key and requires a new key to
+#' be provided, even if one already exists. If `FALSE` and an API key
 #' already exists, that key will be printed to the console. If no key exists,
 #' you will be prompted to enter a key regardless of the value of
-#' \code{force}. Defaults to \code{FALSE}.
+#' `force`. Defaults to `FALSE`.
 #'
 #' @export
 fixer_api_key <- function(force = FALSE) {
-  env <- Sys.getenv("FIXER_API_KEY")
-  if (!identical(env, "") && !force) return(env)
+  if (!force) {
+    key <- Sys.getenv("FIXER_API_KEY")
+    if (key != "") {
+      #message("Updating FIXER_API_KEY environment variable...")
+      options("fixer.API.key" = key)
+      print(key)
+    } else {
+      warning("Couldn't find environment variable 'FIXER_API_KEY'")
+    }
+  } else {
 
-  if (!interactive()) {
-    stop("Please set environment variable FIXER_API_KEY to your fixer API key",
-      call. = FALSE
-    )
-    message("Use `Sys.setenv(FIXER_API_KEY = <key>)`")
+  if (interactive()) {
+    key <- readline("Please enter your API key and press enter: ")
+  } else {
+    cat("Please enter your API key and press enter: ")
+    key <- readLines(con = "stdin", n = 1)
   }
 
   message("Couldn't find environment variable FIXER_API_KEY")
@@ -29,12 +40,15 @@ fixer_api_key <- function(force = FALSE) {
   key <- readline(": ")
 
   if (identical(key, "")) {
-    Sys.unsetenv("FIXER_API_KEY")
     stop("Fixer API key entry failed", call. = FALSE)
   }
 
-  message("Updating FIXER_API_KEY")
-  Sys.setenv(FIXER_API_KEY = key)
+  message("Updating FIXER_API_KEY environment variable...")
+  options("fixer.API.key" = key)
+  invisible()
 
-  key
+  }
 }
+
+
+

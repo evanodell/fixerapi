@@ -1,4 +1,8 @@
 
+# fixerapi 0.2.0
+
+
+
 # fixerapi 0.1.6
 
 * Fixed #1, where `ifelse()` stripping attributes from variables caused errors

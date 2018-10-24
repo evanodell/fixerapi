@@ -17,3 +17,13 @@
 #' @importFrom tibble enframe as.tibble
 #' @importFrom tidyr unnest_
 NULL
+
+# Checking for API key on package load
+.onLoad <- function(libname, pkgname) {
+  if (is.null(getOption("fixer.API.key"))) {
+    key <- Sys.getenv("FIXER_API_KEY")
+    if (key != "") options("fixer.API.key" = key)
+  }
+
+  invisible()
+}

@@ -2,11 +2,11 @@
 # success check utility
 success_check <- function(result) {
   if (!result$success) {
-    stop(paste(
-      "Error code:", result$error$code, "\n",
-      "Error type:", result$error$type, "\n",
-      "Error message:", result$error$info
-    ), call. = FALSE)
+    message(paste("Error code:", result$error$code))
+    message(paste("Error type:", result$error$type))
+    message(paste("Error message:", result$error$info))
+
+    stop("Request failed", call. = FALSE)
   }
 
   result

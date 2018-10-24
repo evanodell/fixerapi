@@ -10,11 +10,11 @@
 #' "Professional Plus" and "Enterprise" accounts.
 #'
 #' @param start_date The start date of requested time series, in "YYYY-MM-DD"
-#' style, or any style convertable to  "YYYY-MM-DD" using \code{as.Date()}.
+#' style, or any style convertable to  "YYYY-MM-DD" using `as.Date()`.
 #' @param end_date The end date of requested time series, in "YYYY-MM-DD"
-#' style, or any style convertable to  "YYYY-MM-DD" using \code{as.Date()}.
+#' style, or any style convertable to  "YYYY-MM-DD" using `as.Date()`.
 #' @inheritParams fixer_latest
-#' @seealso fixer_time_series
+#' @seealso [fixer_time_series()]
 #'
 #' @return A tibble with the currency symbol, start rate, end rate, change and
 #' change percentage over the requested time period. Each currency is given its
@@ -39,14 +39,12 @@ fixer_fluctuation <- function(start_date, end_date,
   symbols_query <- symbols_util(symbols)
 
   query <- paste0(
-    fixer_url, "fluctuation?access_key=", fixer_api_key(),
+    "fluctuation?access_key=", getOption("fixer.API.key"),
     "&start_date=", start_date, "&end_date=", end_date,
     base_query, symbols_query
   )
 
-  df <- jsonlite::fromJSON(query)
-
-  df <- success_check(df)
+  df <- fixer_download(query)
 
   rates <- enframe(df$rates)
 
