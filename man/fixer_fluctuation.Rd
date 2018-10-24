@@ -19,7 +19,7 @@ to \code{"EUR"}. Other base currencies are only available on paid plans.}
 \item{symbols}{A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
 \code{NULL} and returns all available currencies. See
-\code{\link{fixer_symbols}} for details on symbol options.}
+\code{\link[=fixer_symbols]{fixer_symbols()}} for details on symbol options.}
 }
 \value{
 A tibble with the currency symbol, start rate, end rate, change and
@@ -44,5 +44,5 @@ x <- fixer_fluctuation(start_date = "2018-02-25", end_date = "2018-02-26",
 }
 }
 \seealso{
-fixer_time_series
+\code{\link[=fixer_time_series]{fixer_time_series()}}
 }

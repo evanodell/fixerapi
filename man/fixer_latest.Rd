@@ -13,7 +13,7 @@ to \code{"EUR"}. Other base currencies are only available on paid plans.}
 \item{symbols}{A character vector of the symbols of currencies to return
 exchange rates for, or a string for a single currency. Defaults to
 \code{NULL} and returns all available currencies. See
-\code{\link{fixer_symbols}} for details on symbol options.}
+\code{\link[=fixer_symbols]{fixer_symbols()}} for details on symbol options.}
 }
 \value{
 A tibble with the latest available currency exchange data.

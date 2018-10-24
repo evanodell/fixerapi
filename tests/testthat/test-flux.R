@@ -16,16 +16,19 @@ test_that("flux works", {
     "Only 365 days of data can be returned at one time"
   )
 
-  uje <- fixer_fluctuation(start_date = "2018-02-25", end_date = "2018-02-26",
-                           symbols = c("USD", "JPY"))
+  uje <- fixer_fluctuation(
+    start_date = "2018-02-25", end_date = "2018-02-26",
+    symbols = c("USD", "JPY")
+  )
   expect_equal(nrow(uje), 2)
   expect_true(tibble::is.tibble(uje))
   expect_equal(uje$change_pct, c(0.2467, 0.2466))
 
-  ujg <- fixer_fluctuation(start_date = "2018-02-25", end_date = "2018-02-26",
-                         symbols = c("USD", "JPY"), base = "GBP" )
+  ujg <- fixer_fluctuation(
+    start_date = "2018-02-25", end_date = "2018-02-26",
+    symbols = c("USD", "JPY"), base = "GBP"
+  )
   expect_equal(nrow(ujg), 2)
   expect_true(tibble::is.tibble(ujg))
   expect_equal(ujg$start_rate, c(1.396765, 149.555857))
-
 })

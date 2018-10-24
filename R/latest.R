@@ -32,7 +32,8 @@ fixer_latest <- function(base = "EUR", symbols = NULL) {
 
   symbols_query <- symbols_util(symbols)
 
-  query <- paste0("latest?access_key=", getOption("fixer.API.key"),
+  query <- paste0(
+    "latest?access_key=", getOption("fixer.API.key"),
     base_query, symbols_query
   )
 

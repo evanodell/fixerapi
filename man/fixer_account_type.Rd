@@ -26,6 +26,10 @@ there will be no other impact on your usage of the API.
 The \href{https://fixer.io/}{fixer.io} API still checks the
 account type when receiving requests, so setting you account type here only
 forces HTTPS instead of HTTP.
+
+Setting the environmental variable \code{FIXER_ACT_TYPE} to one of
+\code{"free"} or \code{"paid"} will negate the need to use this function every time the
+package is used.
 }
 \examples{
 \dontrun{

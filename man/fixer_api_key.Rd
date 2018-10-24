@@ -14,8 +14,12 @@ you will be prompted to enter a key regardless of the value of
 \code{force}. Defaults to \code{FALSE}.}
 }
 \description{
-\href{https://fixer.io}{fixer.io} requires an API key, which is saved as an
+\href{https://fixer.io/}{fixer.io} requires an API key, which is saved as an
 environmental variable. In interactive mode, using \code{fixer_api_key}
 will prompt you to enter an API key. You can also use
 \code{Sys.setenv(FIXER_API_KEY = <key>)} to set the API key.
+}
+\details{
+By default \code{fixerapi} will look for the environment variable
+\code{FIXER_API_KEY} when the package is loaded.
 }

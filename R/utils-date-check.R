@@ -13,8 +13,10 @@ date_check <- function(start_date, end_date) {
     )
   }
 
-  date_query <- paste0("&start_date=", as.Date(start_date),
-                       "&end_date=", as.Date(end_date))
+  date_query <- paste0(
+    "&start_date=", as.Date(start_date),
+    "&end_date=", as.Date(end_date)
+  )
 
   date_query
 }

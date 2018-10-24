@@ -16,7 +16,7 @@ Defaults to \code{"EUR"}. Can only be changed with paid plans.}
 
 \item{symbols}{The symbols of currencies to return exchange rates for.
 Defaults to \code{NULL} and returns all available currencies. See
-\code{\link{fixer_symbols}} for details on symbol options.}
+\url{fixer_symbols}] for details on symbol options.}
 }
 \value{
 A tibble with exchange rates to the base currency on a given date.
