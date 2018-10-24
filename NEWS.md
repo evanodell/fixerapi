@@ -1,7 +1,16 @@
 
-# fixerapi 0.2.0
+# fixerapi 0.1.6.9000
 
+* Updates to documentation.
 
+* Improvements to API key handling so that API keys are checked 
+  for on package load.
+
+* Increased test coverage
+
+* Creation of generic download function to ease code maintenance
+
+* Tweaks to error messages
 
 # fixerapi 0.1.6
 

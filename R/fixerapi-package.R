@@ -25,5 +25,10 @@ NULL
     if (key != "") options("fixer.API.key" = key)
   }
 
+  act_type <- Sys.getenv("FIXER_ACT_TYPE")
+  if (tolower(act_type) %in% c("free", "paid")){
+    Sys.setenv(FIXER_ACT_TYPE = act_type)
+  }
+
   invisible()
 }
