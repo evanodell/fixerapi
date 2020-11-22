@@ -1,5 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -7,13 +8,14 @@ MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/
 [![GitHub
 tag](https://img.shields.io/github/tag/evanodell/fixerapi.svg)](https://github.com/evanodell/fixerapi)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/fixerapi)](https://dgrtwo.shinyapps.io/cranview/)
-[![Travis-CI Build
-Status](https://travis-ci.org/evanodell/fixerapi.svg?branch=master)](https://travis-ci.org/evanodell/fixerapi)
+[![R build
+status](https://github.com/evanodell/fixerapi/workflows/R-CMD-check/badge.svg)](https://github.com/evanodell/fixerapi/actions)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/evanodell/fixerapi?branch=master&svg=true)](https://ci.appveyor.com/project/evanodell/fixerapi)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/evanodell/fixerapi/master.svg)](https://codecov.io/github/evanodell/fixerapi?branch=master)
 [![DOI](https://zenodo.org/badge/127822432.svg)](https://zenodo.org/badge/latestdoi/127822432)
+<!-- badges: end -->
 
 # fixerapi
 
@@ -49,17 +51,17 @@ code) for all currencies available through the API, use
 There are five currency exchange query types, which
 [fixer.io](https://fixer.io) calls endpoints. They are:
 
-  - Current exchange rates, accessed using `fixer_latest()` (available
+-   Current exchange rates, accessed using `fixer_latest()` (available
     with free account)
-  - Historical exchange rates on a given date, using
+-   Historical exchange rates on a given date, using
     `fixer_historical()` (available on all paid accounts)
-  - Conversion from one currency to another, either currently or on a
+-   Conversion from one currency to another, either currently or on a
     specific date, using `fixer_convert()` (available on all paid
     accounts)
-  - A time series of up to 365 days showing daily exchange rates over
+-   A time series of up to 365 days showing daily exchange rates over
     that time, using `fixer_time_series()` (available on “professional”
     and higher grade accounts)
-  - Exchange rate fluctuations over a period of up to 365 days, using
+-   Exchange rate fluctuations over a period of up to 365 days, using
     `fixer_fluctuation()` (available on “professional plus” and
     “enterprise” grade accounts)
 
@@ -101,17 +103,15 @@ To cite package `fixerapi` in publications use:
 Odell E (2018). *fixerapi: An R Client for the “Fixer.io” Currency API*.
 doi: 10.5281/zenodo.1211687 (URL:
 <http://doi.org/10.5281/zenodo.1211687>), R package version 0.1.6,
-\<URL: <https://docs.evanodell.com/fixerapi>\>.
+&lt;URL: <https://docs.evanodell.com/fixerapi>&gt;.
 
 A BibTeX entry for LaTeX users is
 
-``` 
-  @Manual{,
-    title = {{fixerapi}: An R Client for the "Fixer.io" Currency API},
-    author = {Evan Odell},
-    year = {2018},
-    note = {R package version 0.1.6},
-    doi = {10.5281/zenodo.1211687},
-    url = {https://docs.evanodell.com/fixerapi},
-  }
-```
+      @Manual{,
+        title = {{fixerapi}: An R Client for the "Fixer.io" Currency API},
+        author = {Evan Odell},
+        year = {2018},
+        note = {R package version 0.1.6},
+        doi = {10.5281/zenodo.1211687},
+        url = {https://docs.evanodell.com/fixerapi},
+      }
